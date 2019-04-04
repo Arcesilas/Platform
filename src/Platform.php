@@ -10,7 +10,7 @@ final class Platform
     /**
      * @var string
      */
-    private $home;
+    private static $home;
 
     /**
      * Returns whether the OS is Windows or not

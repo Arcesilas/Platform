@@ -8,7 +8,7 @@ final class Xdg
      * Whether the system uses Freedesktop
      * @var bool
      */
-    private $isUsed;
+    private static $isUsed;
 
     /**
      * Returns whether the system uses Freedesktop
