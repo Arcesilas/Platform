@@ -1,0 +1,27 @@
+{
+    "name": "arcesilas/platform",
+    "description": "Get User's home, Application data directory, etc.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arcesilas",
+            "email": "arcesilas@neutre.email"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arcesilas\\Platform\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Arcesilas\\Platform\\Tests\\": "tests/"
+        }
+    }
+}
