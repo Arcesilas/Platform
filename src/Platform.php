@@ -63,7 +63,7 @@ final class Platform
      */
     public static function getDataDir()
     {
-        return self::getDir('findDataHome');
+        return self::getDir('getDataHome');
     }
 
     /**
@@ -72,7 +72,7 @@ final class Platform
      */
     public static function getConfigDir()
     {
-        return self::getDir('findConfigHome');
+        return self::getDir('getConfigHome');
     }
 
     /**
@@ -81,7 +81,7 @@ final class Platform
      */
     public static function getCacheDir()
     {
-        return self::getDir('findCacheHome');
+        return self::getDir('getCacheHome');
     }
 
     /**
@@ -98,7 +98,7 @@ final class Platform
         }
 
         if (Xdg::isUsed()) {
-            return call_user_func(['Xdg', $xdgFunc], $home);
+            return call_user_func([Xdg::class, $xdgFunc], $home);
         }
 
         return $home;
