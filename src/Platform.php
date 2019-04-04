@@ -94,7 +94,7 @@ final class Platform
         $home = self::getUserHome();
 
         if (self::isWindows()) {
-            return getenv('LOCALAPPDATA') ?: $home;
+            return self::findWindowsDataDir() ?: $home;
         }
 
         if (Xdg::isUsed()) {
@@ -108,10 +108,8 @@ final class Platform
      * Finds the config directory
      * @return string
      */
-    private static function findWindowsDataDir($home)
+    private static function findWindowsDataDir()
     {
-        return getenv('LOCALAPPDATA') ?: $home;
+        return getenv('LOCALAPPDATA') ?: getenv('APPDATA');
     }
-
-
 }
